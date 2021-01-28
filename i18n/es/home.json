@@ -1,0 +1,86 @@
+{
+  "title": "Inicio",
+  "articlesNavigation": "Artículos",
+  "misc": "Varios",
+  "articles": {
+    "whatWhy": {
+      "title": "¿Qué y por qué?",
+      "paragraphs": [
+        "El propósito de esta página es presentar lo que me gusta hacer y nace de la necesidad de poder mostrar mi trabajo y aptitudes más allá de mi formación académica.",
+        "Todo fue o será hecho siguiendo estos principios: accesibilidad, diseño y desempeño. El código fuente de esta página es código abierto y está disponible en Github con licencia MIT. Se puede acceder a el través de mi [perfil de GitHub](https://github.com/danieluy/danielsosauy)."
+      ],
+      "banner": {
+        "src": "assets/img/article-banners/undraw_design_notes_8dmv.svg",
+        "alt": "Ilustración decorativa: ¿qué y por qué?"
+      }
+    },
+    "accessibility": {
+      "title": "Accesibilidad",
+      "paragraphs": [
+        "Este es un tema por el que empecé a apasionarme recientemente. Si bien pensar acerca de la accesibilidad no es nuevo para mi, estaba muy ocupado aprendiendo otras cosas en este nuevo mundo de la programación y, siendo honesto, estaba postergando comenzar a estudiar accesibilidad en la web. Por esto, cuando decidí rehacer mi página web la primera desición que tomé fue: la accesibilidad no debe sufrir por el diseño o el desempeño.",
+        "Como se recomienda en [Estructura web y documentación - Aprenda desarrollo web](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/estructura), adopté un diseño simple pero efectivo como punto de partida para diseñar mi sitio web. Tiene la ventaja de ser familiar para las personas que dependen de tecnologías de asistencia, y aunque pensé que limitaría mis opciones, terminó siendo un buen marco para los elementos que finalmente elegí para mi diseño.",
+        "Utilicé etiquetas HTML semánticamente significativas cuando fue posible e hice que todos los demás elementos cumplieran con los estándares [Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/) siguiendo las recomendaciones de [WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/). Por supuesto, siendo este mi primer intento de un diseño totalmente accesible, no espero que sea perfecto, pero seguiré iterando hasta que mi experiencia y conocimiento sean suficientes para hacerlo lo más perfecto posible.",
+        "Estas son algunas de las cosas que implementé en mi intento de hacer la página accesible:",
+        "El color del texto lo elegí siguiendo los criterios de contraste mínimo de [WCAG 2.0 Contrast (Minimum) criteria](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html), principalmente utilizando las herramientas de desarrollo de Google Chrome.",
+        "Tuve que renunciar a la idea original que tenía para el menú de navegación. Había pensado en un menú vertical que se expandiera y colapsara de acuerdo con el path y el hash de la navegación, pero en última instancia, esto no iba a funcionar mientras pretendiera seguir los [patrones de diseño de WAI-ARIA Authoring Practices 1.1]( https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex). Particularmente porque la sección sobre menús [Menu or Menu bar](https://www.w3.org/TR/wai-aria-practices-1.1/#menu) dice que cuando se presiona la tecla Enter, el ítem del menú debe cerrar su menú. Como resultado, acepté que el menú de navegación estará colapsado todo el tiempo, excepto cuando se esté utilizando.",
+        "Para el formulario de contacto seguí las recomendaciones de [Forms Concepts • Forms • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/forms/). Como resultado, implementé varias características dentro de estos conceptos: etiquetado de controles, instrucciones de formulario, validación y notificaciones.",
+        "El etiquetado de controles se realizó tratando de mantener las características visuales y estéticas siempre que no perjudicaran la accesibilidad. Un ejemplo de esto es el asterisco comunmente usado para indicar que un campo es requerido. Un lector de pantalla diciendo \"Correo electrónico asterisco, campo de entrada...\" no sería una buena experiencia para el usuario, así que decidí usarlos pero ocultos para las tecnologías de asistencia.",
+        "Las instrucciones del formulario fueron un trabajo de dos partes. Por un lado, tenemos las instrucciones de campo (por ejemplo, nombre, tipo, requerido) y, por otro lado, tenemos las instrucciones antes de ingresar el formulario. Lo primero que encuentra el usuario es la información sobre cuántos campos hay, y también que todos son requeridos, un simple párrafo logró esto. Luego, cuando el usuario llega al primer campo, tiene la información necesaria para saber qué hacer con él. Aparte de eso, los campos son una simple combinación de los elementos HTML label e input, con algo de CSS arriba.",
+        "Las notificaciones y validación resultaron estar tan relacionadas entre sí que las cubriré juntas. Al principio estaba validando cuando ocurría un cambio en lo ingresado, pero aprendí que esto no es realmente accesible. Una de las recomendaciones es alertar a los usuarios cuando hay algo mal con lo ingresado, imagine entonces una alerta diciéndole al usuario que un campo de correo electrónico no es válido por cada carácter que escriba hasta que el formato sea correcto, eso sería realmente molesto. Entonces, aunque no es raro ver este tipo de comportamiento en formularios, elegí hacer la validación al enviar el formulario. De esta forma, los usuarios no serán interrumpidos mientras escriben, y tiene la ventaja de ser amigable con otras funciones recomendadas por razones de accesibilidad. Estos son: primero, cuando algo sale mal, una alerta le dice al usuario qué pasó, y segundo, el foco se lleva en el primer elemento con error. En mi caso, decidí alertar solo sobre el primer error e informarle al usuario que el foco se colocó en ese campo. Pensé que ser alertado acerca de un error e inmediatamente ser llevado al lugar donde arreglarlo, terminaría siendo una experiencia más sencilla que tener que prestar atención a todos los errores e intentar recordar qué estaba mal con cada uno. Finalmente, necesitaba una forma de informar al usuario el resultado de la operación de envío. Para esto utilicé lo que se llama una [polite live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) para notificar al usuario sin interrumpirlo. Como toque personal, decidí agregar un mensaje para informar a los usuarios que pudieran resultar molestos por un cartel delante del contenido, de la posibilidad de presionar la tecla Escape para descartar dicho cartel (hay un botón de cierre más convencional que también se anuncia )."
+      ],
+      "banner": {
+        "src": "assets/img/article-banners/undraw_web_browsing_p77h.svg",
+        "alt": "Ilustración decorativa: accesibilidad"
+      }
+    },
+    "design": {
+      "title": "Diseño",
+      "paragraphs": [
+        "Soy desarrollador de software y me encanta el diseño, hasta el punto de que no puedo concebir uno sin el otro, de la misma manera que no se podría concebir el diseño físico sin el material que lo hace posible. Aunque no puedo llamarme diseñador (tengo demasiado respeto por el diseño para hacerlo), me encanta hacer mis intentos de diseñar cosas, o al menos implementar pautas de diseño que me gusten. Es por eso que decidí diseñar mi propio sitio web.",
+        "Mi intención era crear un sitio web que cumpliera estos criterios en este orden: 1) tiene que ser accesible, 2) tiene que centrarse en el contenido, haciendo a un lado los elementos no esenciales y ocultando la complejidad, 3) tiene para ser simple de navegar, y finalmente, 4) tiene que ser estéticamente agradable.",
+        "Comencé eligiendo cuidadosamente la diagramación, ya que entiendo que es una parte básica del diseño, y que más adelante esa decisión simplificaría o complicaría mi trabajo. Decidí tener tres elementos para manejar tres funcionalidades, tres elementos para competir por la atención de los usuarios, tres elementos de los que preocuparme.",
+        "Primero el contenido, su presencia toma todo el lienzo al ser una franja vertical centrada que flota en un fondo sin interrupciones. Este también es un recurso simple para soportar pantallas móviles y de escritorio. Y sí, prefiero diseñar desktop-first, estoy así de loco 🤪.",
+        "Luego tenemos el menú de navegación que se ubica en una esquina con mínima presencia, algo de color para indicar el estado activo junto con un borde por [razones de accesibilidad](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html), y un comportamiento que le permite colapsarse a sus elementos de nivel superior (no era mi idea original, pero resultó ser mejor).",
+        "Y tercero, hay un pie de página de contacto e información, que se superpone sobre el contenido mientras se fusiona con el fondo. Esa fue mi manera de decir \"Este soy yo, siéntete libre de contactarme\", sin que se pierda el mensaje y sin opacar el contenido.",
+        "Gran parte de la interfaz de esta página son las increíbles ilustraciones utilizadas para acompañar estas palabras, y me gustaría agradecer a [unDraw](https://undraw.co/) por hacer este contenido libre y disponible para todos.",
+        "Mencionaré que el diseño es totalmente responsivo, pero no voy a entrar en detalles porque, honestamente, esto debería darse por hecho hoy en día.",
+        "Finalmente, y para ser claros, no estoy tratando de venderte este diseño, solo estoy siendo explícito sobre la intención y la toma de decisiones, para que sepas que no solo tomé el diseño de alguién más, y como una guía para mí mismo para futuras intervenciones."
+      ],
+      "banner": {
+        "src": "assets/img/article-banners/undraw_art_museum_8or4.svg",
+        "alt": "Ilustración decorativa: diseño"
+      }
+    },
+    "performance": {
+      "title": "Desempeño",
+      "paragraphs": [
+        "Actualmente, este sitio no hace mucho para mejorar el rendimiento, más que nada se usan métodos pasivos como evitar recursos pesados y librerías innecesarias.",
+        "Para mejorar los tiempos de carga, estoy usando code splitting por rutas, de esta manera el sitio solo cargará el contenido de la vista seleccionada, junto con la navegación y el pie de página, lo que aliviana la carga de la página haciendo que se sienta más rápida.",
+        "Probando con [Lighthouse](https://developers.google.com/web/tools/lighthouse) este sitio llega a 97/100 en rendimiento, lo que es suficiente para la mayoría de las aplicaciones, y considero que es más que suficiente para un sitio como este. Intentaré llegar a 100/100, lo que sé que es excesivo, pero como no estoy gastando el dinero de alguien más, y ni siquiera tengo una fecha límite, no veo razón para no hacerlo.",
+        "Tengo una especie de guía para continuar el trabajo sobre este tema que incluye: usar un service worker para almacenar en caché todos los recursos para que se soliciten lo menos posible (otros superpoderes habilitados por los service workers, como hacer la aplicación instalable, o recibir notificaciones, no tiene ningún caso de uso en este sitio, y por esto no planeo usarlos), optimización de imágenes aprovechando [Squoosh.app](https://squoosh.app/), y proporcionar diferentes tamaños de imagen para diferentes tamaños de pantalla, y tal vez, transicionar a server-side rendering."
+      ],
+      "banner": {
+        "src": "assets/img/article-banners/undraw_working_out_6psf.svg",
+        "alt": "Ilustración decorativa: desempeño"
+      }
+    },
+    "tech": {
+      "title": "Tecnología",
+      "paragraphs": [
+        "Aunque la tecnología no fue lo último en lo que pensé, es la última en mencionarse porque no debe estar a la vista.",
+        "Dicho esto, estas son las tecnologías más relevantes usadas en esta página:",
+        "[HTML5](https://es.wikipedia.org/wiki/HTML5), estructuración de la página y articulación de las otras tecnologías involucradas.",
+        "[JavaScript](https://es.wikipedia.org/wiki/JavaScript), utilizado principalmente para construir la interfaz de usuario en el lado del cliente, también hace posible la interacción de los usuarios con la página.",
+        "[CSS](https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada), define y aplica los estilos y animaciones que enriquecen la interacción de los usuarios con el sitio.",
+        "[React](https://es.reactjs.org/), librería JavaScript usada para construir la interfaz de usuario.",
+        "[Redux](https://redux.js.org/), librería JavaScript usada para manejar el estado del idioma y la información general de la aplicación.",
+        "[Webpack](https://webpack.js.org/), empaqueta y minifica los archivos JavaScript, así como otros recursos para optimizar la carga de recursos.",
+        "[TypeScript](https://www.typescriptlang.org/), verificación de tipado y transpilación de código JavaScript."
+      ],
+      "banner": {
+        "src": "assets/img/article-banners/undraw_static_assets_rpm6.svg",
+        "alt": "Ilustración decorativa: tecnología"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.root{
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px dashed grey;
+}
+
+// [theme.breakpoints.down('md')]: {
+//   paddingLeft: 3rem,
+//   paddingRight: 3rem,
+// },
+// [theme.breakpoints.down('xs')]: {
+//   width: '100%',
+//   paddingLeft: theme.spacing(8),
+//   paddingRight: theme.spacing(2),
+// },

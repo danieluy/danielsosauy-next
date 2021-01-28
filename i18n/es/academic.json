@@ -1,0 +1,182 @@
+{
+  "title": "Académico",
+  "coursesTitle": "Cursos",
+  "subjects": "Materias",
+  "score": "Puntaje",
+  "keywords": "Conceptos clave",
+  "courses": [
+    {
+      "title": "Analista Programador",
+      "institute": "Universidad ORT Uruguay",
+      "status": "Completado",
+      "averageScore": "Promedio",
+      "institutionLogo": {
+        "src": "assets/img/academic/institution-logos/Universidad_ORT_Uruguay_-_Logo.png",
+        "alt": "Logo Universidad ORT"
+      },
+      "subjects": [
+        {
+          "name": "Proyecto Integrador (tesis)",
+          "score": 85,
+          "techs": [
+            "Javascript",
+            "HTML",
+            "CSS",
+            "Bases de Datos No Relacionales",
+            "Patrones de Diseño",
+            "Arquitectura"
+          ]
+        },
+        {
+          "name": "Taller de GeneXus",
+          "score": 98,
+          "techs": [
+            "GeneXus"
+          ]
+        },
+        {
+          "name": "Diseño y Desarrollo de Aplicaciones",
+          "score": 90,
+          "techs": [
+            "Patrones de Diseño",
+            "Arquitectura",
+            "Programación Orientada a Objetos",
+            "Java",
+            "UML"
+          ]
+        },
+        {
+          "name": "Algoritmos y Estructuras de Datos 2",
+          "score": 99,
+          "techs": [
+            "Programación Orientada a Objetos",
+            "Java",
+            "Árboles",
+            "Grafos",
+            "Multiestructuras"
+          ]
+        },
+        {
+          "name": "Ingeniría de software",
+          "score": 93,
+          "techs": [
+            "Gestión de Proyectos de Software"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Programador Web",
+      "institute": "Universidad ORT Uruguay",
+      "status": "Completado",
+      "averageScore": "Promedio",
+      "institutionLogo": {
+        "src": "assets/img/academic/institution-logos/Universidad_ORT_Uruguay_-_Logo.png",
+        "alt": "Logo Universidad ORT"
+      },
+      "subjects": [
+        {
+          "name": "Programación 1",
+          "score": 99,
+          "techs": [
+            "Javascript",
+            "jQuery",
+            "HTML",
+            "CSS"
+          ]
+        },
+        {
+          "name": "Programación 2",
+          "score": 98,
+          "techs": [
+            "Programación Orientada a Objetos",
+            "C#",
+            "ASP.NET"
+          ]
+        },
+        {
+          "name": "Programación 3",
+          "score": 96,
+          "techs": [
+            "Programación Orientada a Objetos",
+            "C#",
+            "ASP.NET",
+            "ADO.NET",
+            "Entity Framework",
+            "MVC"
+          ]
+        },
+        {
+          "name": "Algoritmos y Estructuras de Datos 1",
+          "score": 96,
+          "techs": [
+            "Programación Orientada a Objetos",
+            "Java",
+            "Listas",
+            "Colas",
+            "Pilas"
+          ]
+        },
+        {
+          "name": "Bases de Datos 1",
+          "score": 93,
+          "techs": [
+            "Diseño de Bases de Datos Relacionales",
+            "SQL Server"
+          ]
+        },
+        {
+          "name": "Bases de Datos 2",
+          "score": 91,
+          "techs": [
+            "Programación SQL",
+            "SQL Server"
+          ]
+        },
+        {
+          "name": "Taller de Tecnologías",
+          "score": 100,
+          "techs": [
+            "Mobile",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "jQuery",
+            "jQuery Mobile",
+            "PhoneGap"
+          ]
+        },
+        {
+          "name": "Taller de Usabilidad y Accesibilidad",
+          "score": 95,
+          "techs": [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "Javascript",
+            "jQuery"
+          ]
+        },
+        {
+          "name": "Introducción a la Computación",
+          "score": 95,
+          "techs": [
+            "Hardware",
+            "Windows",
+            "Linux",
+            "Networking"
+          ]
+        },
+        {
+          "name": "Taller de Objetos",
+          "score": 89,
+          "techs": [
+            "Documentation and Diagrams",
+            "C#",
+            "ASP.NET"
+          ]
+        }
+      ]
+    }
+  ]
+}
