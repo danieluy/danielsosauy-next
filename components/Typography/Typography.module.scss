@@ -1,5 +1,19 @@
-.paragraph{}
-.subtitle{}
-.title1{}
-.title2{}
-.title3{}
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.paragraph {
+  @include _paragraph;
+}
+
+.subtitle {}
+
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: $primary-text-color;
+}
+
+.title2 {}
+
+.title3 {}

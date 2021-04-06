@@ -1,9 +1,11 @@
+@import '../../styles/colors';
+
 .root{
   width: 600px;
   margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 2px dashed grey;
+  border-bottom: 2px dashed $light-grey;
 }
 
 // [theme.breakpoints.down('md')]: {
