@@ -1,0 +1,30 @@
+.figure {
+  outline: 1px solid var(--bg-color-300);
+  outline-offset: -1px;
+  padding: 1rem;
+  border-radius: 1rem;
+  animation: zoom-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+@keyframes zoom-out {
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.figcaption {
+  display: flex;
+  justify-content: flex-end;
+}

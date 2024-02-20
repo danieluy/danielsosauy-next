@@ -1,0 +1,130 @@
+:root {
+  --bg-color-000: #fefefe;
+  --bg-color-100: #eeeeee;
+  --bg-color-200: #dedede;
+  --bg-color-300: #cecece;
+  --bg-color-400: #bebebe;
+  --bg-color-500: #aeaeae;
+  --color-000: #111;
+  --color-100: #333;
+
+  --primary-color: #6002ee;
+  --primary-light-color: #7629e9;
+  --seconday-color: #b200d6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color-000: #222;
+    --bg-color-100: #333;
+    --bg-color-200: #444;
+    --bg-color-300: #555;
+    --bg-color-400: #666;
+    --bg-color-500: #777;
+    --color-000: #eee;
+    --color-100: #cecece;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color-000);
+  color: var(--color-000);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+* {
+  color: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-light-color);
+  font-weight: 700;
+  position: relative;
+  transition: color 100ms linear, outline 100ms linear;
+}
+
+a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  box-shadow: 0 2px 0 0 currentColor;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+a:focus {
+  outline-offset: 0.25rem;
+  outline-style: dashed;
+  outline-width: 0.15rem;
+  outline-color: currentColor;
+}
+
+button:focus {
+  outline-offset: 0.25rem;
+  outline-style: dashed;
+  outline-width: 0.15rem;
+  outline-color: currentColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+  line-height: 2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+hr {
+  margin: 1rem 0;
+  height: 1px;
+  background-color: var(--bg-color-200);
+  border: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

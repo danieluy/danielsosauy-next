@@ -1,0 +1,15 @@
+.markdown p {
+  font-size: 1rem;
+}
+
+.markdown p + p {
+  margin-top: 1rem;
+}
+
+.markdown ul {
+  padding-left: 1rem;
+}
+
+.markdown li * {
+  line-height: 1.5;
+}
