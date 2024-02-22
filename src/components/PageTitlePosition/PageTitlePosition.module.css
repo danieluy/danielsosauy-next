@@ -1,0 +1,19 @@
+.wrapper {
+  position: absolute;
+  transition: transform 300ms ease-in;
+  margin-left: 0;
+  transform: translate(2rem, 0);
+}
+
+.wrapper h1 svg {
+  height: 2rem;
+  transition: height 300ms ease-in;
+}
+
+.initial-position {
+  transform: translate(calc(50vw - 50%), 6rem);
+}
+
+.initial-position h1 svg {
+  height: 8rem;
+}

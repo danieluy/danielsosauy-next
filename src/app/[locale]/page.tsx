@@ -15,6 +15,8 @@ const HomePage: NextPage<Props> = async ({ params: { locale } }) => {
 
   return (
     <>
+      <div style={{ height: `7.5rem` }} />
+
       <GreetingSection locale={locale} />
 
       <AcademicSection locale={locale} />

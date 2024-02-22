@@ -1,5 +1,6 @@
 import { MainLogo } from "@/components/MainLogo/MainLogo";
 import { MainNav } from "@/components/MainNav/MainNav";
+import { PageTitlePosition } from "@/components/PageTitlePosition/PageTitlePosition";
 import { IntlProvider } from "@/contexts/IntlContext/IntlContext";
 import { extractMessages } from "@/helpers/intl.helpers";
 import { Locale } from "@/locales";
@@ -31,9 +32,13 @@ export default function RootLayout({ children, params: { locale } }: Props) {
     <html lang={locale}>
       <body className={inter.className}>
         <header className={classes.header}>
-          <h1 aria-label="daniel sosa" className={classes.h1}>
-            <MainLogo />
-          </h1>
+          <span /* need to keep the other elements aligned to the left */ />
+
+          <PageTitlePosition>
+            <h1 aria-label="daniel sosa" className={classes.h1}>
+              <MainLogo />
+            </h1>
+          </PageTitlePosition>
 
           <div>
             <IntlProvider messages={extractMessages(_t, ["Home", "Academic"])}>
