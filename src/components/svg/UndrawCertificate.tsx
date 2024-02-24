@@ -6,10 +6,8 @@ export const UndrawCertificate: FC = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
-      viewBox="0 0 612.33997 467.13"
+      viewBox="0 0 571.9401 689.03807"
       className={classes.svg}
-      width="571.9401"
-      height="689.03807"
     >
       <path
         d="M310.01916,435.42226a27.98147,27.98147,0,0,0,42.37447,6.73419L438.65036,491.628,435.4356,440.0556l-81.418-39.07245a28.13311,28.13311,0,0,0-43.99844,34.43911Z"

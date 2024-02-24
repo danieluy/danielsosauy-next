@@ -9,7 +9,8 @@ type Props = {
 export const ImageFrame: FC<Props> = ({ children, caption }) => {
   return (
     <figure className={classes.figure}>
-      {children}{" "}
+      {children}
+
       {caption && (
         <figcaption className={classes.figcaption}>
           <small>{caption}</small>

@@ -1,5 +1,5 @@
 .figure {
-  outline: 1px solid var(--bg-color-300);
+  outline: 1px solid var(--color-700);
   outline-offset: -1px;
   padding: 1rem;
   border-radius: 1rem;

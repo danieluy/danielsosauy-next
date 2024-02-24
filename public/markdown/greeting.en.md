@@ -1,3 +1,7 @@
-The purpose of this site is to **present what I like to do**. It was created out of the necessity of displaying my work and my aptitudes, since they fall out of what my academic formation demonstrates.
+The purpose of this site is to host whatever I feel like.
 
-Everything was made (or is going to be made), following these principles: accessibility, design, performance. The source code of this site is open source and it's freely available on Github under the MIT license. You can get it through my [GitHub profile](https://github.com/danieluy/danielsosauy).
+It may contain introductory information, resources I'd like to have on hand, and who knows what else; it will change and hopefully evolve over time.
+
+For everything I do here I'll try to have the accessibility at the top of my mind, but I will also focus on design and performance.
+
+The source code can be found on [GitHub](https://github.com/danieluy/danielsosauy).

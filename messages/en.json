@@ -1,10 +1,13 @@
 {
   "Home": "Home",
   "Academic": "Academic",
-  "Welcome to my personal website": "Welcome to my personal website",
+  "Welcome!": "Welcome!",
   "Personal website illustration by <a>unDraw</a>": "Personal website illustration by <a>unDraw</a>",
   "Certification illustration by <a>unDraw</a>": "Certification illustration by <a>unDraw</a>",
   "Unable to load file {fileName}": "Unable to load file {fileName}",
   "danieluy | academic": "danieluy | academic",
-  "More": "More"
+  "More": "More",
+  "Stuff": "Stuff",
+  "My code snippets illustration by <a>unDraw</a>": "My code snippets illustration by <a>unDraw</a>",
+  "Snippets": "Snippets"
 }

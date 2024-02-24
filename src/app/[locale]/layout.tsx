@@ -32,7 +32,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
     <html lang={locale}>
       <body className={inter.className}>
         <header className={classes.header}>
-          <span /* need to keep the other elements aligned to the left */ />
+          <span /* needed to keep the other elements aligned to the left */ />
 
           <PageTitlePosition>
             <h1 aria-label="daniel sosa" className={classes.h1}>
@@ -41,7 +41,9 @@ export default function RootLayout({ children, params: { locale } }: Props) {
           </PageTitlePosition>
 
           <div>
-            <IntlProvider messages={extractMessages(_t, ["Home", "Academic"])}>
+            <IntlProvider
+              messages={extractMessages(_t, ["Home", "Academic", "Stuff"])}
+            >
               <MainNav locale={locale} />
             </IntlProvider>
           </div>

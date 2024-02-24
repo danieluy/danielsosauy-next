@@ -1,0 +1,40 @@
+.menu {
+  display: none;
+  position: relative;
+}
+
+.menu:focus {
+  outline-style: dashed;
+  outline-color: currentColor;
+}
+
+.menu-items {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--bg-color-100);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.menu-item-active {
+  outline-offset: 0.25rem;
+  outline-style: dashed;
+  outline-width: 0.15rem;
+  outline-color: currentColor;
+}
+
+.menu-item-active:focus-within {
+  /* Prevent the element to get the outline when the item inside gets it */
+  outline-style: none;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: inline-block;
+  }
+}

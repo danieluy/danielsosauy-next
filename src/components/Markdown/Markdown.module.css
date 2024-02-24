@@ -2,7 +2,7 @@
   font-size: 1rem;
 }
 
-.markdown p + p {
+.markdown p + P {
   margin-top: 1rem;
 }
 
@@ -12,4 +12,8 @@
 
 .markdown li * {
   line-height: 1.5;
+}
+
+.markdown img {
+  max-width: 100%;
 }

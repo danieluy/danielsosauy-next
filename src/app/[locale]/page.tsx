@@ -4,6 +4,8 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { AcademicSection } from "./components/AcademicSection";
 import { GreetingSection } from "./components/GreetingSection";
 
+import classes from "./page.module.css";
+
 type Props = {
   params: {
     locale: Locale;
@@ -15,7 +17,7 @@ const HomePage: NextPage<Props> = async ({ params: { locale } }) => {
 
   return (
     <>
-      <div style={{ height: `7.5rem` }} />
+      <div className={classes.spacer} />
 
       <GreetingSection locale={locale} />
 

@@ -1,19 +1,34 @@
 .wrapper {
   position: absolute;
-  transition: transform 300ms ease-in;
-  margin-left: 0;
-  transform: translate(2rem, 0);
+  top: 0;
+  left: 0;
+}
+
+.wrapper h1 {
+  width: 100vw;
+  transition: max-width 300ms ease-in, transform 300ms ease-in;
+  transform-origin: top left;
+  /* outline: 1px solid red;
+  outline-offset: -1px; */
 }
 
 .wrapper h1 svg {
-  height: 2rem;
-  transition: height 300ms ease-in;
+  width: 100%;
+  height: fit-content;
 }
 
-.initial-position {
-  transform: translate(calc(50vw - 50%), 6rem);
+.first-position h1 {
+  max-width: var(--container-max-width-without-scrollbar);
+  transform: translate(calc(50vw - 50%), 4rem);
 }
 
-.initial-position h1 svg {
-  height: 8rem;
+.second-position h1 {
+  max-width: 10.5rem;
+  transform: translate(2rem, 1rem);
+}
+
+@media screen and (max-width: 800px) {
+  .second-position h1 {
+    transform: translate(1rem, 1rem);
+  }
 }

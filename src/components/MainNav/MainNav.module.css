@@ -4,3 +4,9 @@
   align-items: center;
   gap: 1rem;
 }
+
+@media screen and (max-width: 800px) {
+  .nav {
+    display: none;
+  }
+}

@@ -32,7 +32,7 @@ export const GreetingSection: FC<Props> = async ({ locale }) => {
           <UndrawPersonalWebsite />
         </ImageFrame>
 
-        <h2>{_t("Welcome to my personal website")}</h2>
+        <h2>{_t("Welcome!")}</h2>
       </header>
 
       <MarkdownFromFile fileName={`greeting.${locale}.md`} />

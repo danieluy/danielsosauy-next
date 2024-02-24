@@ -1,5 +1,7 @@
 "use client";
 
+import { LOCALES } from "@/locales";
+import { usePathname } from "next/navigation";
 import { FC, ReactElement, useEffect, useState } from "react";
 import classes from "./PageTitlePosition.module.css";
 
@@ -9,6 +11,9 @@ type Props = {
 
 export const PageTitlePosition: FC<Props> = ({ children }) => {
   const [isInInitialPosition, setIsInInitialPosition] = useState(true);
+  const pathname = usePathname();
+
+  const isHomePage = LOCALES.map((locale) => `/${locale}`).includes(pathname);
 
   useEffect(() => {
     const mainElement = document.querySelector("main");
@@ -25,7 +30,9 @@ export const PageTitlePosition: FC<Props> = ({ children }) => {
   return (
     <span
       className={`${classes.wrapper} ${
-        isInInitialPosition ? classes["initial-position"] : ""
+        isInInitialPosition && isHomePage
+          ? classes["first-position"]
+          : classes["second-position"]
       }`}
     >
       {children}

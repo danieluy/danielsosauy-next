@@ -4,15 +4,6 @@
   align-items: flex-end;
 }
 
-.button {
-  background: none;
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.25rem;
-}
-
 .collapsible {
   display: grid;
   grid-template-rows: 0fr;

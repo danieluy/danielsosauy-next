@@ -1,1 +1,6 @@
-
+.spacer {
+  width: var(--container-max-width);
+  max-width: 100%;
+  aspect-ratio: 5.3;
+  margin-bottom: 1rem;
+}

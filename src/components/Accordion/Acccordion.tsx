@@ -42,7 +42,6 @@ export const Accordion: FC<Props> = ({
           aria-controls={id}
           aria-expanded={isOpen ?? _isOpen}
           id={`${id}-button`}
-          className={classes.button}
         >
           {openLabel}
           <ChevronDown

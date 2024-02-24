@@ -1,16 +1,26 @@
 :root {
-  --bg-color-000: #fefefe;
-  --bg-color-100: #eeeeee;
-  --bg-color-200: #dedede;
-  --bg-color-300: #cecece;
-  --bg-color-400: #bebebe;
-  --bg-color-500: #aeaeae;
-  --color-000: #111;
-  --color-100: #333;
+  --bg-color-000: #eeeeee;
+  --bg-color-100: #f8f8f8;
+  --bg-color-200: #ffffff;
 
-  --primary-color: #6002ee;
-  --primary-light-color: #7629e9;
-  --seconday-color: #b200d6;
+  --color-000: #111;
+  --color-100: #222;
+  --color-200: #333;
+  --color-300: #444;
+  --color-400: #555;
+  --color-500: #666;
+  --color-600: #777;
+  --color-700: #888;
+
+  --primary-color: #005a00;
+
+  --sm-screen-size: 800px;
+  --md-screen-size: 900px;
+  --lg-screen-size: 1200px;
+  --xl-screen-size: 1536px;
+
+  --container-max-width: var(--sm-screen-size);
+  --container-max-width-without-scrollbar: calc(796px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,11 +28,23 @@
     --bg-color-000: #222;
     --bg-color-100: #333;
     --bg-color-200: #444;
-    --bg-color-300: #555;
-    --bg-color-400: #666;
-    --bg-color-500: #777;
+
     --color-000: #eee;
-    --color-100: #cecece;
+    --color-100: #ccc;
+    --color-200: #bbb;
+    --color-300: #aaa;
+    --color-400: #999;
+    --color-500: #888;
+    --color-600: #777;
+    --color-700: #666;
+
+    --primary-color: #58c400;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --container-max-width-without-scrollbar: calc(100vw - 2.25rem);
   }
 }
 
@@ -48,7 +70,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--primary-light-color);
+  color: var(--primary-color);
   font-weight: 700;
   position: relative;
   transition: color 100ms linear, outline 100ms linear;
@@ -75,6 +97,15 @@ a:focus {
   outline-color: currentColor;
 }
 
+button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 button:focus {
   outline-offset: 0.25rem;
   outline-style: dashed;
@@ -88,7 +119,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 100;
+  font-weight: 400;
   line-height: 2;
 }
 
@@ -119,8 +150,39 @@ h6 {
 hr {
   margin: 1rem 0;
   height: 1px;
-  background-color: var(--bg-color-200);
+  background-color: var(--color-700);
   border: none;
+}
+
+pre {
+  background-color: var(--bg-color-100);
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: auto;
+}
+
+pre:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+pre:not(:first-child) {
+  margin-top: 1rem;
+}
+
+code {
+  font-family: monospace;
+}
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color-000);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-300);
 }
 
 @media (prefers-color-scheme: dark) {
