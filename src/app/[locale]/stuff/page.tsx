@@ -2,9 +2,13 @@ import { ImageFrame } from "@/components/ImageFrame/ImageFrame";
 import MarkdownFromFile from "@/components/Markdown/MarkdownFromFile";
 import { Section } from "@/components/Section/Section";
 import { MyCodeSnippets } from "@/components/svg/MyCodeSnippets";
-import { Locale } from "@/locales";
+import { LOCALES, Locale } from "@/locales";
 import { NextPage } from "next";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+
+export async function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
 
 type Props = {
   params: {
