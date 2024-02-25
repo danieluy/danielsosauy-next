@@ -1,6 +1,7 @@
 import { ImageFrame } from "@/components/ImageFrame/ImageFrame";
 import MarkdownFromFile from "@/components/Markdown/MarkdownFromFile";
 import { Section } from "@/components/Section/Section";
+import { SectionHeader } from "@/components/Section/SectionHeader";
 import { MyCodeSnippets } from "@/components/svg/MyCodeSnippets";
 import { LOCALES, Locale } from "@/locales";
 import { NextPage } from "next";
@@ -23,25 +24,31 @@ const StuffPage: NextPage<Props> = async ({ params: { locale } }) => {
   return (
     <>
       <Section>
-        <header>
-          <ImageFrame
-            caption={_t.rich("My code snippets illustration by <a>unDraw</a>", {
-              a: (label) => (
-                <a
-                  href="https://undraw.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {label}
-                </a>
-              ),
-            })}
-          >
-            <MyCodeSnippets />
-          </ImageFrame>
-
+        <SectionHeader
+          id="snippets-section"
+          hero={
+            <ImageFrame
+              caption={_t.rich(
+                "My code snippets illustration by <a>unDraw</a>",
+                {
+                  a: (label) => (
+                    <a
+                      href="https://undraw.co"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {label}
+                    </a>
+                  ),
+                }
+              )}
+            >
+              <MyCodeSnippets />
+            </ImageFrame>
+          }
+        >
           <h2>{_t("Snippets")}</h2>
-        </header>
+        </SectionHeader>
 
         <MarkdownFromFile fileName={`stuff-snippets.${locale}.md`} />
       </Section>

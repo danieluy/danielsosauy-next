@@ -2,6 +2,7 @@ import { Accordion } from "@/components/Accordion/Acccordion";
 import { ImageFrame } from "@/components/ImageFrame/ImageFrame";
 import MarkdownFromFile from "@/components/Markdown/MarkdownFromFile";
 import { Section } from "@/components/Section/Section";
+import { SectionHeader } from "@/components/Section/SectionHeader";
 import { UndrawCertificate } from "@/components/svg/UndrawCertificate";
 import { Locale } from "@/locales";
 import { getTranslations } from "next-intl/server";
@@ -17,25 +18,28 @@ export const AcademicSection: FC<Props> = async ({ locale }) => {
 
   return (
     <Section id="academic">
-      <header>
-        <ImageFrame
-          caption={_t.rich("Certification illustration by <a>unDraw</a>", {
-            a: (label) => (
-              <a
-                href="https://undraw.co"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {label}
-              </a>
-            ),
-          })}
-        >
-          <UndrawCertificate />
-        </ImageFrame>
-
+      <SectionHeader
+        id="academic-section"
+        hero={
+          <ImageFrame
+            caption={_t.rich("Certification illustration by <a>unDraw</a>", {
+              a: (label) => (
+                <a
+                  href="https://undraw.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {label}
+                </a>
+              ),
+            })}
+          >
+            <UndrawCertificate />
+          </ImageFrame>
+        }
+      >
         <h2>{_t("Academic")}</h2>
-      </header>
+      </SectionHeader>
 
       <Accordion
         className={classes.accordion}
