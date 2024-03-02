@@ -30,12 +30,6 @@ console.groupCollapsed("Page headings");
 console.groupEnd();
 ```
 
-This is how it would look like.
-
-![Example of highlight headings script](/images/stuff-snippets.png)
-
----
-
 ### Mark as viewed/not viewed on GitHub
 
 These snippets are really helpful when going through large code reviews in GitHub.

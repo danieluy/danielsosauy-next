@@ -4,4 +4,4 @@ It may contain introductory information, resources I'd like to have on hand, and
 
 For everything I do here I'll try to have the accessibility at the top of my mind, but I will also focus on design and performance.
 
-The source code can be found on [GitHub](https://github.com/danieluy/danielsosauy).
+The source code can be found on [GitHub](https://github.com/danieluy/danielsosauy-next).

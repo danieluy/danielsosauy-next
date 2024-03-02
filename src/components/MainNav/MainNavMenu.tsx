@@ -22,7 +22,7 @@ export const MainNavMenu: FC<Props> = ({ className, locale }) => {
       <Menu as="nav" className={classes.menu}>
         <div>
           <Menu.Button>
-            Menu
+            {_t("Menu")}
             <MenuIcon aria-hidden="true" />
           </Menu.Button>
         </div>

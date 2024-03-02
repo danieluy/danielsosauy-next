@@ -4,6 +4,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { AcademicSection } from "./components/AcademicSection";
 import { GreetingSection } from "./components/GreetingSection";
 
+import { InfoAndContactSection } from "./components/InfoAndContactSection";
 import classes from "./page.module.css";
 
 export async function generateStaticParams() {
@@ -24,6 +25,8 @@ const HomePage: NextPage<Props> = async ({ params: { locale } }) => {
       <div className={classes.spacer} />
 
       <GreetingSection locale={locale} />
+
+      <InfoAndContactSection locale={locale} />
 
       <AcademicSection locale={locale} />
     </>

@@ -42,7 +42,12 @@ export default function RootLayout({ children, params: { locale } }: Props) {
 
           <div>
             <IntlProvider
-              messages={extractMessages(_t, ["Home", "Academic", "Stuff"])}
+              messages={extractMessages(_t, [
+                "Home",
+                "Academic",
+                "Stuff",
+                "Menu",
+              ])}
             >
               <MainNav locale={locale} />
             </IntlProvider>

@@ -30,12 +30,6 @@ console.groupCollapsed("Page headings");
 console.groupEnd();
 ```
 
-Así es como se ve.
-
-![Ejemplo de resultado del script resaltar títulos](/images/stuff-snippets.png)
-
----
-
 ### Marcar como visto/no visto en GitHub
 
 Estos fragmentos son útiles al hacer grandes revisiones de código en GitHub.
