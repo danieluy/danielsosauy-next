@@ -1,6 +1,4 @@
-I'm Daniel Sosa. I'm based in [Montevideo, Uruguay](https://www.google.com/maps/place/Montevideo,+Montevideo+Department), where I write code for a living.
-
-Since 2018, I've been dedicated to various web-based projects at [SpaceDev](https://www.spacedev.io), and since 2021 I have been assigned to a full-time role as a senior full stack engineer at [Drata](https://drata.com).
+I'm Daniel Sosa. I'm based in [Montevideo, Uruguay](https://www.google.com/maps/place/Montevideo,+Montevideo+Department), where I write code as a job as well as a hobbie. Since 2018, I've been dedicated to various web-based projects at [SpaceDev](https://www.spacedev.io), and since 2021 I have been assigned to a full-time role as a senior full stack engineer at [Drata](https://drata.com).
 
 ### Contact
 
