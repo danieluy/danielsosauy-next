@@ -34,13 +34,17 @@ export const MainNav: FC<Props> = ({ locale }) => {
 
           {locale !== "en" && (
             <li>
-              <LocaleSwitch locale="en">English</LocaleSwitch>
+              <LocaleSwitch locale="en" aria-label="Switch to English">
+                <strong>Español</strong> | English
+              </LocaleSwitch>
             </li>
           )}
 
           {locale !== "es" && (
             <li>
-              <LocaleSwitch locale="es">Español</LocaleSwitch>
+              <LocaleSwitch locale="es" aria-label="Cambiar a Español">
+                Español | <strong>English</strong>
+              </LocaleSwitch>
             </li>
           )}
         </ul>

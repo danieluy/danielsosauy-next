@@ -46,15 +46,15 @@ export const AcademicSection: FC<Props> = async ({ locale }) => {
         header={
           <MarkdownFromFile
             lineSlice={[0, 5]}
-            fileName={`academic-software-analist.${locale}.md`}
+            fileName={`academic-software-analyst.${locale}.md`}
           />
         }
-        id="academic-software-analist-accordion"
+        id="academic-software-analyst-accordion"
         openLabel={_t("More")}
       >
         <MarkdownFromFile
           lineSlice={[5, null]}
-          fileName={`academic-software-analist.${locale}.md`}
+          fileName={`academic-software-analyst.${locale}.md`}
         />
       </Accordion>
 

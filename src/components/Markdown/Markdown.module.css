@@ -1,3 +1,66 @@
+.markdown h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin: 0;
+}
+
+.markdown h1:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.markdown h2 {
+  font-size: 1.75rem;
+  line-height: 3rem;
+  margin: 0;
+  margin: 0;
+}
+
+.markdown h2:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin: 0;
+}
+
+.markdown h3:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.markdown h4 {
+  font-size: 1.25rem;
+  line-height: 3rem;
+  margin: 0;
+  margin: 0;
+}
+
+.markdown h4:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.markdown h5 {
+  font-size: 1.125rem;
+  line-height: 3rem;
+  margin: 0;
+  margin: 0;
+}
+
+.markdown h5:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.markdown h6 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+.markdown h6:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
 .markdown p {
   font-size: 1rem;
 }
