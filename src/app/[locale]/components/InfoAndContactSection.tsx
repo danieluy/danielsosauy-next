@@ -1,4 +1,4 @@
-import portraitSrc from "@/assets/daniel_sosa_portrait.png";
+import portraitSrc from "@/assets/portrait.jpg";
 import { ImageFrame } from "@/components/ImageFrame/ImageFrame";
 import MarkdownFromFile from "@/components/Markdown/MarkdownFromFile";
 import { Section } from "@/components/Section/Section";
@@ -19,7 +19,7 @@ export const InfoAndContactSection = async ({ locale }: Props) => {
       <SectionHeader
         id="info-and-contact-section"
         hero={
-          <ImageFrame caption={_t("Photo of me taken in an elevator")}>
+          <ImageFrame caption={_t("Me and my son sitting in a bed")}>
             <Image
               src={portraitSrc}
               alt=""
