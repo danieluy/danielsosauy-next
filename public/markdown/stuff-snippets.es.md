@@ -35,7 +35,7 @@ console.groupEnd();
 Estos fragmentos son útiles al hacer grandes revisiones de código en GitHub.
 No es necesario hacer clic en el checkbox de _visto_ para cada archivo, simplemente ejecutar un fragmento de código.
 
-#### New GitHub experience
+#### Nueva experiencia en GitHub
 
 ```javascript
 // Marcar todo como visto
@@ -49,7 +49,7 @@ document.querySelectorAll('[aria-label="Viewed"]').forEach((elem) => {
 });
 ```
 
-#### Old GitHub experience
+#### Experiencia anterior en GitHub
 
 ```javascript
 // Marcar todo como visto
