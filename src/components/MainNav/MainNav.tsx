@@ -14,7 +14,6 @@ type Props = {
 };
 
 export const MainNav: FC<Props> = ({ locale }) => {
-  console.log("MainNav", locale);
   const { _t } = useContext(IntlContext);
 
   return (

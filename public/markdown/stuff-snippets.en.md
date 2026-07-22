@@ -12,7 +12,7 @@ console.groupCollapsed("Page headings");
 
 [1, 2, 3, 4, 5, 6].forEach((headingLevel) => {
   document.querySelectorAll(`h${headingLevel}`).forEach((headingNode) => {
-    console.log(headingNode);
+    console.info(headingNode);
 
     headingNode.style.outline = "1px solid purple";
 
