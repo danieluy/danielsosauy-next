@@ -28,7 +28,7 @@ export default async function StuffPage({ params }: Props) {
           hero={
             <ImageFrame
               caption={_t.rich(
-                "My code snippets illustration by <a>unDraw</a>",
+                "Online articles illustration by <a>unDraw</a>",
                 {
                   a: (label) => (
                     <a
@@ -39,7 +39,7 @@ export default async function StuffPage({ params }: Props) {
                       {label}
                     </a>
                   ),
-                }
+                },
               )}
             >
               <Resources />
@@ -69,7 +69,7 @@ export default async function StuffPage({ params }: Props) {
                       {label}
                     </a>
                   ),
-                }
+                },
               )}
             >
               <MyCodeSnippets />
