@@ -23,7 +23,7 @@ type Props = Readonly<{
 }>;
 
 export default async function RootLayout({ children, params }: Props) {
-  const { locale } = await params as { locale: string };
+  const { locale } = (await params) as { locale: string };
   setRequestLocale(locale);
   const _t = await getTranslations({ locale });
 

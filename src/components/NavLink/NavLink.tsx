@@ -3,7 +3,7 @@
 import { LOCALES } from "@/locales";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useMemo } from "react";
 
 type Props = {
   children: ReactNode;
@@ -14,17 +14,28 @@ type Props = {
 export const NavLink: FC<Props> = ({ children, href, exact = false }) => {
   const pathname = usePathname();
 
-  const pathnameWithoutLocale =
-    pathname.replace(new RegExp(`^\/(${LOCALES.join("|")})`), "") || "/";
+  const { isActive, pathnameLocale, hrefWithoutHash } = useMemo(() => {
+    const pathnameLocale = pathname.match(
+      new RegExp(`^\/(${LOCALES.join("|")})`),
+    )?.[1];
 
-  const hrefWithoutHash = href.split("#")[0];
+    const pathnameWithoutLocale =
+      pathname.replace(new RegExp(`^\/(${LOCALES.join("|")})`), "") || "/";
 
-  const isActive = exact
-    ? pathnameWithoutLocale === hrefWithoutHash
-    : pathnameWithoutLocale.startsWith(hrefWithoutHash);
+    const hrefWithoutHash = href.split("#")[0];
+
+    const isActive = exact
+      ? pathnameWithoutLocale === hrefWithoutHash
+      : pathnameWithoutLocale.startsWith(hrefWithoutHash);
+
+    return { isActive, pathnameLocale, hrefWithoutHash };
+  }, [href, exact, pathname]);
 
   return (
-    <Link className={isActive ? "active" : undefined} href={href}>
+    <Link
+      className={isActive ? "active" : undefined}
+      href={`/${pathnameLocale}${hrefWithoutHash}`}
+    >
       {children}
     </Link>
   );
