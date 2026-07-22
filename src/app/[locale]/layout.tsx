@@ -3,10 +3,8 @@ import { MainNav } from "@/components/MainNav/MainNav";
 import { PageTitlePosition } from "@/components/PageTitlePosition/PageTitlePosition";
 import { IntlProvider } from "@/contexts/IntlContext/IntlContext";
 import { extractMessages } from "@/helpers/intl.helpers";
-import { Locale } from "@/locales";
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Montserrat } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
@@ -21,12 +19,13 @@ export const metadata: Metadata = {
 
 type Props = Readonly<{
   children: ReactNode;
-  params: { locale: Locale };
+  params: Promise<{ locale: string }>;
 }>;
 
-export default function RootLayout({ children, params: { locale } }: Props) {
-  unstable_setRequestLocale(locale);
-  const _t = useTranslations();
+export default async function RootLayout({ children, params }: Props) {
+  const { locale } = await params as { locale: string };
+  setRequestLocale(locale);
+  const _t = await getTranslations({ locale });
 
   return (
     <html lang={locale}>
@@ -49,7 +48,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
                 "Menu",
               ])}
             >
-              <MainNav locale={locale} />
+              <MainNav locale={locale as "en" | "es"} />
             </IntlProvider>
           </div>
         </header>

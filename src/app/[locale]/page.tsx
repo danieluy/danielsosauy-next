@@ -1,6 +1,5 @@
-import { LOCALES, Locale } from "@/locales";
-import { NextPage } from "next";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { LOCALES } from "@/locales";
+import { setRequestLocale } from "next-intl/server";
 import { AcademicSection } from "./components/AcademicSection";
 import { GreetingSection } from "./components/GreetingSection";
 
@@ -12,13 +11,12 @@ export async function generateStaticParams() {
 }
 
 type Props = {
-  params: {
-    locale: Locale;
-  };
+  params: Promise<{ locale: string }>;
 };
 
-const HomePage: NextPage<Props> = async ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
   return (
     <>
@@ -31,6 +29,4 @@ const HomePage: NextPage<Props> = async ({ params: { locale } }) => {
       <AcademicSection locale={locale} />
     </>
   );
-};
-
-export default HomePage;
+}

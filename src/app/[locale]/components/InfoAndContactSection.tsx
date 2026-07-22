@@ -3,12 +3,11 @@ import { ImageFrame } from "@/components/ImageFrame/ImageFrame";
 import MarkdownFromFile from "@/components/Markdown/MarkdownFromFile";
 import { Section } from "@/components/Section/Section";
 import { SectionHeader } from "@/components/Section/SectionHeader";
-import { Locale } from "@/locales";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 type Props = {
-  locale: Locale;
+  locale: string;
 };
 
 export const InfoAndContactSection = async ({ locale }: Props) => {

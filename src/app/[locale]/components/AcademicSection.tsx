@@ -4,13 +4,12 @@ import MarkdownFromFile from "@/components/Markdown/MarkdownFromFile";
 import { Section } from "@/components/Section/Section";
 import { SectionHeader } from "@/components/Section/SectionHeader";
 import { UndrawCertificate } from "@/components/svg/UndrawCertificate";
-import { Locale } from "@/locales";
 import { getTranslations } from "next-intl/server";
 import { FC } from "react";
 import classes from "./components.module.css";
 
 type Props = {
-  locale: Locale;
+  locale: string;
 };
 
 export const AcademicSection: FC<Props> = async ({ locale }) => {

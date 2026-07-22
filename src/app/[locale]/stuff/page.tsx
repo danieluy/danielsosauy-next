@@ -4,22 +4,20 @@ import { Section } from "@/components/Section/Section";
 import { SectionHeader } from "@/components/Section/SectionHeader";
 import { MyCodeSnippets } from "@/components/svg/MyCodeSnippets";
 import { Resources } from "@/components/svg/Resources";
-import { LOCALES, Locale } from "@/locales";
-import { NextPage } from "next";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { LOCALES } from "@/locales";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
 
 type Props = {
-  params: {
-    locale: Locale;
-  };
+  params: Promise<{ locale: string }>;
 };
 
-const StuffPage: NextPage<Props> = async ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+export default async function StuffPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const _t = await getTranslations({ locale });
 
   return (
@@ -85,6 +83,4 @@ const StuffPage: NextPage<Props> = async ({ params: { locale } }) => {
       </Section>
     </>
   );
-};
-
-export default StuffPage;
+}

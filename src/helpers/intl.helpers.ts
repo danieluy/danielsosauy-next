@@ -1,13 +1,12 @@
-import { useTranslations } from "next-intl";
-
-export function extractMessages<T extends ReturnType<typeof useTranslations>>(
-  t: T,
-  keys: Parameters<T>[0][]
+export function extractMessages(
+  t: (key: string) => string,
+  keys: string[]
 ): Record<string, string> {
-  return keys.reduce((acc, key) => {
-    return {
+  return keys.reduce(
+    (acc, key) => ({
       ...acc,
       [key]: t(key),
-    };
-  }, {});
+    }),
+    {} as Record<string, string>
+  );
 }
