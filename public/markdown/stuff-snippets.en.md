@@ -30,10 +30,26 @@ console.groupCollapsed("Page headings");
 console.groupEnd();
 ```
 
-### Mark as viewed/not viewed on GitHub
+### Mark as viewed/not viewed on GitHub (new experience)
 
 These snippets are really helpful when going through large code reviews in GitHub.
 You don't need to click the _viewed_ checkbox for each file, you just run a snippet.
+
+#### New GitHub experience
+
+```javascript
+// Mark all as viewed
+document.querySelectorAll('[aria-label="Not Viewed"]').forEach((elem) => {
+  elem.click();
+});
+
+// Mark all as not viewed
+document.querySelectorAll('[aria-label="Viewed"]').forEach((elem) => {
+  elem.click();
+});
+```
+
+#### Old GitHub experience
 
 ```javascript
 // Mark all as viewed

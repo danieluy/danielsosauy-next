@@ -30,10 +30,26 @@ console.groupCollapsed("Page headings");
 console.groupEnd();
 ```
 
-### Marcar como visto/no visto en GitHub
+### Marcar como visto/no visto en GitHub (nueva experiencia)
 
 Estos fragmentos son útiles al hacer grandes revisiones de código en GitHub.
 No es necesario hacer clic en el checkbox de _visto_ para cada archivo, simplemente ejecutar un fragmento de código.
+
+#### New GitHub experience
+
+```javascript
+// Marcar todo como visto
+document.querySelectorAll('[aria-label="Not Viewed"]').forEach((elem) => {
+  elem.click();
+});
+
+// Marcar todo como no visto
+document.querySelectorAll('[aria-label="Viewed"]').forEach((elem) => {
+  elem.click();
+});
+```
+
+#### Old GitHub experience
 
 ```javascript
 // Marcar todo como visto
